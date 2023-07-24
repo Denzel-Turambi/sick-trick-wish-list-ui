@@ -14,10 +14,15 @@ function App() {
     .then(data => setTricks(data))
   }, [])
 
+  function addTrick(newTrick) {
+    console.log('addnewtrick', newTrick)
+    setTricks([...tricks, newTrick])
+  }
+
   return (
     <div className="App">
       <h1>Sick Trick Wish List</h1>
-      <Form />
+      <Form addTrick={addTrick}/>
       <CardContainer className="card-container" tricks={tricks}/>
     </div>
   );
