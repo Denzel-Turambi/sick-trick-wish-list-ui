@@ -1,9 +1,8 @@
 import React from "react";
-import CardContainer from "./CardContainer";
+import './Card.css'
 
 function Card({name, obstacle, tutorial, id}) {
-  // console.log('name', name)
-  console.log(name)
+  
   return (
     <div id={id} className="single-card">
       <p id={id}>name: {name}</p>

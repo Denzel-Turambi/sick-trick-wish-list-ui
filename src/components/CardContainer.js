@@ -1,14 +1,14 @@
 import React from "react";
 import Card from "./Card";
+import './CardContainer.css'
 
 function CardContainer(props) {
   let trickCards = [];
   const tricksArray = props.tricks;
-  console.log('PROPS', tricksArray)
 
 trickCards = tricksArray.map(trick => {
   return (
-    <div className='card'>
+    <div>
       <Card
         name={trick.name}
         obstacle={trick.obstacle}
@@ -21,7 +21,7 @@ trickCards = tricksArray.map(trick => {
 })
 
 return (
-  <section>
+  <section className='card-container'>
     {trickCards}
   </section>
 )
