@@ -2,8 +2,8 @@ import './App.css';
 import React from 'react';
 import { useState, useEffect } from 'react';
 import { getData } from '../../ApiCalls';
-import Card from '../Card';
 import CardContainer from '../CardContainer';
+import Form from '../Form';
 
 function App() {
 
@@ -17,6 +17,7 @@ function App() {
   return (
     <div className="App">
       <h1>Sick Trick Wish List</h1>
+      <Form />
       <CardContainer className="card-container" tricks={tricks}/>
     </div>
   );
